@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cooking Class Feedback Form</title>
+  <link rel="stylesheet" href="Survey-Site.css" />
+</head>
+<body>
+  <!-- Main form container with required id -->
+  <form id="survey-form" aria-label="Cooking Class Feedback Form">
+    
+    <!-- Required h1 with id="title" and non-empty text -->
+    <h1 id="title">Cooking Class Feedback Form</h1>
+    
+    <!-- Required p with id="description" and non-empty text -->
+    <p id="description">Please fill out this form to help us improve our cooking classes.</p>
+
+    <!-- Name label and input -->
+    <label id="name-label" for="name">Full Name *</label>
+    <input 
+      type="text" 
+      id="name" 
+      name="name" 
+      placeholder="Enter your full name" 
+      required 
+    />
+
+    <!-- Email label and input -->
+    <label id="email-label" for="email">Email *</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      placeholder="Enter your email" 
+      required 
+    />
+
+    <!-- Number input (age), with min, max, placeholder -->
+    <label id="number-label" for="number">Age (optional)</label>
+    <input 
+      type="number" 
+      id="number" 
+      name="age" 
+      min="10" 
+      max="100" 
+      placeholder="Enter your age" 
+    />
+
+    <!-- Dropdown select with id="dropdown" -->
+    <label for="dropdown">What is your cooking skill level?</label>
+    <select id="dropdown" name="skill-level" required>
+      <option value="" disabled selected>Select your skill level</option>
+      <option value="beginner">Beginner</option>
+      <option value="intermediate">Intermediate</option>
+      <option value="advanced">Advanced</option>
+    </select>
+
+    <!-- Radio buttons for referral -->
+    <fieldset>
+      <legend>How did you hear about us? *</legend>
+      <label>
+        <input type="radio" name="referral" value="friend" required /> Friend or family
+      </label>
+      <label>
+        <input type="radio" name="referral" value="social_media" /> Social media
+      </label>
+      <label>
+        <input type="radio" name="referral" value="advertisement" /> Advertisement
+      </label>
+      <label>
+        <input type="radio" name="referral" value="other" /> Other
+      </label>
+    </fieldset>
+
+    <!-- Checkboxes for topics -->
+    <fieldset>
+      <legend>Which topics interest you? (Select all that apply)</legend>
+      <label><input type="checkbox" name="topics" value="baking" /> Baking</label>
+      <label><input type="checkbox" name="topics" value="grilling" /> Grilling</label>
+      <label><input type="checkbox" name="topics" value="vegetarian" /> Vegetarian cooking</label>
+      <label><input type="checkbox" name="topics" value="desserts" /> Desserts</label>
+      <label><input type="checkbox" name="topics" value="international" /> International cuisines</label>
+    </fieldset>
+
+    <!-- Textarea for comments -->
+    <label for="comments">Additional Comments or Suggestions</label>
+    <textarea id="comments" name="comments" placeholder="Your thoughts here..."></textarea>
+
+    <!-- Submit button with required id and type -->
+    <button id="submit" type="submit">Submit Feedback</button>
+  </form>
+</body>
+</html>
+
